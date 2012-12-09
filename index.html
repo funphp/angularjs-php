@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="blog"  >
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script src="js/angular-1.0.1.min.js"></script>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/blog.js"></script>
+<script src="js/blogapiservice.js"></script>
+<script src="js/angular-resource-1.0.1.min.js"></script>
+<title>Sample blog application with angular js</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body ng-controller="MainController">
+
+<div id="wrapper">
+    <div id="wrapper-bgbtm">
+      
+        <!-- end #header -->
+        <div id="menu">
+            <ul>
+                <li class="current_page_item"><a ng-click="setRoute('home')">Homepage</a></li>
+                <li><a ng-click="setRoute('blog')">Blog</a></li>
+                <li><a ng-click="setRoute('photos')">Photos</a></li>
+                <li><a ng-click="setRoute('about')">About</a></li>
+                <li><a ng-click="setRoute('links')">Links</a></li>
+                <li><a ng-click="setRoute('contact')">Contact</a></li>
+            </ul>
+        </div>
+        <!-- end #menu -->
+         <div id="page">
+   <h1>{{title}}</h1>
+            <div id="page-bgtop">
+                <div id="page-bgbtm">
+                <div ng-view></div>
+                   
+                    <!-- end #content -->
+                    <div id="sidebar">
+                        <div id="search">
+                            <h2>Search</h2>
+                            <form method="get" action="">
+                                <fieldset>
+                                    <input type="text" name="s" id="search-text" size="15" value="enter keywords here..." />
+                                    <input type="submit" id="search-submit" value="GO" />
+                                </fieldset>
+                            </form>
+                        </div>
+                        <ul>
+                            <li>
+                                <h2>Aliquam tempus</h2>
+                                <p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
+                            </li>
+                            <li>
+                                <h2>Categories</h2>
+                                <ul>
+                                    <li><a href="#">Aliquam libero</a></li>
+                                    <li><a href="#">Consectetuer adipiscing elit</a></li>
+                                    <li><a href="#">Metus aliquam pellentesque</a></li>
+                                    <li><a href="#">Suspendisse iaculis mauris</a></li>
+                                    <li><a href="#">Urnanet non molestie semper</a></li>
+                                    <li><a href="#">Proin gravida orci porttitor</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Blogroll</h2>
+                                <ul>
+                                    <li><a href="#">Aliquam libero</a></li>
+                                    <li><a href="#">Consectetuer adipiscing elit</a></li>
+                                    <li><a href="#">Metus aliquam pellentesque</a></li>
+                                    <li><a href="#">Suspendisse iaculis mauris</a></li>
+                                    <li><a href="#">Urnanet non molestie semper</a></li>
+                                    <li><a href="#">Proin gravida orci porttitor</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Archives</h2>
+                                <ul>
+                                    <li><a href="#">Aliquam libero</a></li>
+                                    <li><a href="#">Consectetuer adipiscing elit</a></li>
+                                    <li><a href="#">Metus aliquam pellentesque</a></li>
+                                    <li><a href="#">Suspendisse iaculis mauris</a></li>
+                                    <li><a href="#">Urnanet non molestie semper</a></li>
+                                    <li><a href="#">Proin gravida orci porttitor</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end #sidebar -->
+                    <div style="clear: both;">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <!-- end #page -->
+        <div id="footer">
+            <p>Copyright (c) 2011 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">FCT</a>.</p>
+        </div>
+        <!-- end #footer -->
+    </div>
+</div>
+</body>
+</html>
